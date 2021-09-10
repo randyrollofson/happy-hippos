@@ -35,12 +35,17 @@ def addAccessory(hippo_array, accessory_array):
                         hippo_array[idx1][idx2] = accessory_array[idx1][idx2]
         return hippo_array
 
+hippos = [hippos.hippo_basic, hippos.hippo_two_teeth, hippos.hippo_six_teeth, hippos.hippo_smile, 
+hippos.hippo_tongue_out, hippos.hippo_lick]
+
 # tells how many times to iterate through the following mechanism
 # which equals the number of hippos
 # e.g. 
 # for x in range(0-200) 
 # would generate 201 hippos numbered 0-200
-for x in range(0, 1):
+# for x in range(0, 1):
+for idx, hippo in enumerate(hippos):
+
 
     # # using ETH block number as starting random number seed
     # b=11981207
@@ -84,10 +89,10 @@ for x in range(0, 1):
     #     # random number is 7 or less >> black beak
     #     bk = (0, 0, 0) 
 
-    hippo_array = np.array(hippos.basic_hippo, dtype=np.uint8)
+    hippo_array = np.array(hippo, dtype=np.uint8)
     sunglasses_array = np.array(eye_accessories.sunglasses, dtype=np.uint8)
 
-    hippo_array = addAccessory(hippo_array, sunglasses_array)
+    # hippo_array = addAccessory(hippo_array, sunglasses_array)
 
     # for idx1, val1 in enumerate(hippo_array):
     #     for idx2, val2 in enumerate(val1):
@@ -124,5 +129,5 @@ for x in range(0, 1):
     # use PIL to create an image from the new array of pixels
     new_image = Image.fromarray(hippo_array)
     new_image = new_image.resize(dimensions, resample=0)
-    imgname = dirname + '/hippo_images/' + (str(x)) + '.png'
+    imgname = dirname + '/hippo_images/' + (str(idx + 1)) + '.png'
     new_image.save(imgname)

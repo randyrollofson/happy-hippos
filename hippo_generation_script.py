@@ -17,6 +17,7 @@ from random import randint
 import hippos
 import eye_accessories
 import back_accessories
+import facial_hair
 import colors
 
 # gets path to be used in image creation mechanism, using os
@@ -93,9 +94,11 @@ for idx, hippo in enumerate(hippos):
     hippo_array = np.array(hippo, dtype=np.uint8)
     sunglasses_array = np.array(eye_accessories.sunglasses, dtype=np.uint8)
     bird_array = np.array(back_accessories.bird, dtype=np.uint8)
+    facial_hair_array = np.array(facial_hair.goatie, dtype=np.uint8)
 
     hippo_array = addAccessory(hippo_array, sunglasses_array)
     hippo_array = addAccessory(hippo_array, bird_array)
+    hippo_array = addAccessory(hippo_array, facial_hair_array)
 
     # for idx1, val1 in enumerate(hippo_array):
     #     for idx2, val2 in enumerate(val1):

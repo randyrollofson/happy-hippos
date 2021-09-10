@@ -2,12 +2,18 @@
 bg = (0,255,255)
 # blank
 xx = (99, 99, 99)
-# outline color
+# outline color (black)
 ol = (0, 0, 0)
-# eyes
+# white
 ey = (255, 255, 255)
+# light grey
+gr = (246, 246, 246)
+# yellow
+ye = (255, 255, 27)
 
 # (1 = lightest, 5 = darkest)
+
+# brown shades
 # color 1
 c1 = (159, 105, 52)
 # color 2
@@ -19,6 +25,6 @@ c4 = (101, 67, 33)
 # color 5
 c5 = (82, 54, 27)
 
-# pink
+# pink shades
 p1 = (255, 192, 203)
 p2 = (255, 167, 182)
